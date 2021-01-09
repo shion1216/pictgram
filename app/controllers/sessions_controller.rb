@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
   
   def destroy
     log_out
-    render_to root_url, info: 'ログアウトしました'
+    redirect_to root_url, info: 'ログアウトしました'
   end
 
   private

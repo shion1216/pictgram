@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
+  get 'topics/new'
   get 'sessions/new'
-  
-  #get 'users/new'
-  resources :users
   
   #get 'pages/index'
   root 'pages#index'
@@ -12,4 +10,8 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   delete '/logout' => 'sessions#destroy'
   
+  #get 'users/new'
+  resources :users
+  
+  resources :topics
 end
