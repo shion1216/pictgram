@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   root 'pages#index'
   get 'pages/help'
   
-  get '/login', to: 'sessions#new'
-  post '/login', to: 'sessions#create'
-  delete '/logout', to: 'sessions#destroy'
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  delete '/logout' => 'sessions#destroy'
   
 end
