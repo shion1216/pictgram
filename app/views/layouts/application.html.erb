@@ -20,26 +20,22 @@
           <span><%= image_tag "icons/logo.png", class: "navbar-brand" %></span>
         <% end %>
         <ul class="nav navbar-nav navbar-right">
-          <% if logged_in? %>
+
             <li>
               <%= link_to favorites_index_path do %>
                 <%= image_tag "icons/heart.png" %>
               <% end %>
             </li>
             <li>
-              <!- ログイン時のみ表示　->
-              <% if logged_in? %>
-                <%= link_to new_topic_path do %>
-                  <%= image_tag "icons/camera.png" %>
-                <% end %>
-              <% end%>
+              <%= link_to new_topic_path do %>
+              　<%= image_tag "icons/camera.png" %>
+              <% end %>
             </li>
             <li>
               <%= link_to logout_path, method: :delete do %>
                 <%= image_tag "icons/logout.png" %>
               <% end %>
             </li>
-          <% else %>
             <li>
               <%= link_to new_user_path do %>
                 <%= image_tag "icons/register.png" %>
@@ -50,7 +46,7 @@
                 <%= image_tag "icons/login.png" %>
               <% end %>
             </li>
-          <% end %>
+
         </ul>
       </div>
     </nav>

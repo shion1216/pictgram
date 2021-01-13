@@ -1,8 +1,8 @@
 class User < ApplicationRecord
   
   #パスワード空白・文字数・ローマ字数字
-  VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])[a-z\d]{8,32}+\z/
-  validates :password, presence: true, length: {in: 8..32}, format: {with: VALID_PASSWORD_REGEX}
+  VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[A-Z])(?=.*?\d)[a-zA-Z\d]{8,10}\z/
+  validates :password, presence: true, format: {with: VALID_PASSWORD_REGEX}
   
   
   #名前空白・長さ
